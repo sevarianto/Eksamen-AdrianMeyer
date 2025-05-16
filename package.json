@@ -1,0 +1,23 @@
+{
+  "name": "eksamen-adrianmeyer",
+  "version": "1.0.0",
+  "description": "JavaScript & API Eksamen 2025\r Laget av Adrian Meyer",
+  "main": "",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sevarianto/Eksamen-AdrianMeyer.git"
+  },
+  "keywords": [],
+  "author": "Adrian Meyer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sevarianto/Eksamen-AdrianMeyer/issues"
+  },
+  "homepage": "https://github.com/sevarianto/Eksamen-AdrianMeyer#readme"
+}

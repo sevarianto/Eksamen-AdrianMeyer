@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <title>MatchMe - Logg inn</title>
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/filter.css">
+
+  <link rel="icon" href="/assets/images/match me icon for favicon ai generert.png" type="image/x-icon" />
+</head>
+<body>
+  <div class="background-overlay"></div>
+
+  <main class="container">
+    <header>
+      <img src="/assets/images/MatchMe logo ai generert.png" alt="MatchMe - din datingplattform" class="logo" />
+      <h2>Logg inn</h2>
+
+      <div class="button-row">
+        <button id="toggleTheme">Bytt lys-modus</button>
+        <button id="editProfileBtn" class="edit-profile-btn">Rediger min profil</button>
+      </div>
+    </header>
+
+    <form id="loginForm" class="auth-form">
+  <div class="auth-group">
+    <label for="loginUsername">Brukernavn</label>
+    <input
+      type="text"
+      id="loginUsername"
+      name="username"
+      autocomplete="username"
+      required
+    />
+  </div>
+
+  <div class="auth-group">
+    <label for="loginPassword">Passord</label>
+    <input
+      type="password"
+      id="loginPassword"
+      name="password"
+      autocomplete="current-password"
+      required
+    />
+  </div>
+
+  <button type="submit" class="auth-btn">Logg inn</button>
+  <p id="loginError" class="errorText"></p>
+</form>
+    <p>Har du ikke konto? <a href="register.html">Registrer deg her</a></p>
+  </main>
+
+  <script src="js/core/logger.js"></script>
+  <script src="js/core/api.js"></script>
+  <script src="js/core/auth.js"></script>
+  <script src="js/ui/themeToggle.js"></script>
+</body>
+</html>
