@@ -1,0 +1,119 @@
+/* layout.css – struktur og rammer */
+
+/* Felles for begge moduser */
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin-top: -1.3rem;   
+  padding-top: 0.5rem;    
+  padding-inline: 1.5rem; 
+  margin-inline: auto;    
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  height: auto;      
+  min-height: unset;   
+  max-height: unset;   
+  overflow: hidden;    
+}
+
+
+@media (min-width: 768px) {
+  .container {
+  max-width: 700px;
+ max-height: fit-content; 
+}
+}
+
+.background-overlay {
+  position: fixed;
+  inset: 0;
+  background: url('/assets/images/overlay bilde ai generert match me.png') no-repeat center top 25% fixed;
+  background-size: cover;
+  z-index: -1;
+  pointer-events: none; 
+}
+
+/* Header container */
+#dashboardHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom:0.5rem;
+  padding: -1rem 0 0.5rem 0;
+}
+
+/* Logo */
+.logo {
+  max-width: 300px;
+  max-height: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: -4rem auto auto auto;
+}
+
+/* Knapperaden øverst for global wrapping */
+.button-row {
+  display: flex;
+  justify-content: space-between;;
+  padding: 0 12px 4rem 1rem;
+  box-sizing: border-box;
+  max-width: 700px;
+  width: 100%;
+}
+
+.button-row button {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 16px;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+/* h2 Min profil */
+.profile-heading {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: -2rem 0 2rem 0;
+  letter-spacing: 0.5px;
+}
+
+
+/* **--Lys modus farge spesifikkasjoner--** */ 
+body.light-mode .container {
+  background: hsla(337, 29%, 70%, 0.719);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .background-overlay {
+  opacity: 0.35; 
+  filter: contrast(1.1) brightness(1.05) saturate(1.5);
+}
+
+body.light-mode .profile-heading {
+ color: black;
+}
+
+/* **--Mørk modus farge spesifikkasjoner--** */
+body.dark-mode .container {
+  background: #000000c0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .background-overlay {
+  opacity: 0.10;
+}
+
+body.dark-mode .profile-heading {
+ color: white;
+}

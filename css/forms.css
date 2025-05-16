@@ -1,0 +1,275 @@
+/* forms.css – input, knapper og interaksjon */
+
+
+/* Felles for begge moduser */
+
+/* Gjenbrukbart skjema for authentisering */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.auth-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-group label {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.auth-group input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background-color: white;
+  transition: border 0.3s ease;
+}
+
+.auth-group input:focus {
+  border-color: #a04c8b;
+  outline: none;
+}
+
+.auth-btn {
+  margin: 0 auto 0 auto;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  max-width: 200px;
+  width: 100%;
+  justify-content: center;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-btn:hover {
+  filter: brightness(1.1);
+}
+
+/* Dropdown-meny  */
+input,
+select {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-width: 2px;
+}
+
+/* Rediger profil-knapp */
+.edit-profile-btn {
+  transition: background 0.3s ease;
+}
+
+/* Knapp link tilbake til dashbord */
+.button-link {
+  display: inline-block;
+  margin-bottom: 3rem;
+  padding: 10px 16px ;
+  text-decoration: none;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+/* Slett-knapp */
+.delete-liked-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  max-height: fit-content;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+/* Feedback-meldinger */
+.feedback-message {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  transition: opacity 0.5s ease;
+}
+
+/* Vellykket (grønn) */
+.feedback-success {
+  font-size: 25px;
+  font-weight: 500;
+  color: #0b8527; 
+  align-items: center;
+}
+
+/* Feil (rød) */
+.feedback-error {
+  font-size: 25px;
+  font-weight: 500;
+  color: #cc0000;
+  align-items: center;
+}
+
+/* **--Lys modus farge spesifikkasjoner for komponentene--** */
+body.light-mode .auth-group input {
+  background-color: #fff;
+  color: #222;
+  border-color: #ccc;
+}
+
+body.light-mode .auth-group input::placeholder {
+  color: #aaa;
+}
+
+body.light-mode .auth-btn {
+  background: linear-gradient(90deg, #ff8bb2c5, #f5e6edbe);
+  color: rgba(0, 0, 0, 0.76);
+  border: none;
+  box-shadow: 0 4px 10px rgba(27, 27, 27, 0.466);
+}
+
+body.light-mode .auth-btn:hover {
+  background: linear-gradient(90deg, #ffc3a0, #ff8ecf);
+}
+
+body.light-mode input,
+body.light-mode select {
+  background-color: #fff;
+  color: #000;
+  border-color: #ddd;
+}
+
+body.light-mode input:focus,
+body.light-mode select:focus {
+  border-color: #ff4d6d;
+  box-shadow: 0 0 5px rgba(255, 77, 109, 0.5);
+}
+
+body.light-mode .edit-profile-btn {
+ background: linear-gradient(90deg, #ff8bb2c5, #f5e6edbe);
+ color: rgba(0, 0, 0, 0.76);
+ text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4), 0 -1px 1px rgba(0, 0, 0, 0.1);
+ border: none;
+ box-shadow: 0 4px 10px rgba(27, 27, 27, 0.466);
+}
+
+body.light-mode .edit-profile-btn:hover {
+background: linear-gradient(90deg, #ffc3a0, #ff8ecf);
+}
+
+body.light-mode .button-link {
+  background: linear-gradient(90deg, #ff8bb2c5, #f5e6edbe);
+  color: rgba(0, 0, 0, 0.76);
+  text-decoration: none;
+  border-radius: 12px;
+  text-align: center;
+  border: none;
+  box-shadow: 0 4px 10px rgba(27, 27, 27, 0.466);
+}
+
+body.light-mode .button-link:hover {
+  background: linear-gradient(90deg,  #ffc3a0, #ff8ecf);
+}
+
+
+body.light-mode .delete-liked-btn {
+  border-color: #e53935;
+  color: #e53935;
+}
+
+body.light-mode .delete-liked-btn:hover {
+  background: #e53935;
+  color: white;
+}
+
+
+/* **--Mørk modus farge spesifikkasjoner for komponentene--** */
+body.dark-mode .auth-group input {
+  background-color: #1e1e1e;
+  color: #eee;
+  border-color: #444;
+}
+
+body.dark-mode .auth-group input::placeholder {
+  color: #888;
+}
+
+body.dark-mode .auth-btn {
+  background: linear-gradient(90deg, #a04c8bb0, #a07539ab);
+  color: rgba(255 255, 255, 0.884);
+  border: none;
+}
+
+body.dark-mode .auth-btn:hover {
+  background: linear-gradient(90deg,  #ffca80, #ff5f6d);
+}
+
+body.dark-mode input,
+body.dark-mode select {
+  background-color: #000;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark-mode input:focus,
+body.dark-mode select:focus {
+  border-color: #ff4d6d;
+  box-shadow: 0 0 5px rgba(255, 77, 109, 0.5);
+}
+
+body.dark-mode .edit-profile-btn {
+  background: linear-gradient(90deg, #a04c8bb0, #a07539ab);
+  color: white;
+  background-color: #c57d7d4d;
+  border: none;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .edit-profile-btn:hover {
+  background: linear-gradient(90deg, #ffca80, #ff5f6d);
+}
+
+body.dark-mode .button-link {
+  background: linear-gradient(90deg, #a04c8bb0, #a07539ab);
+  color: rgba(255, 255, 255, 0.884);
+  text-decoration: none;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+body.dark-mode .button-link:hover {
+  background: linear-gradient(90deg,  #ffca80, #ff5f6d);
+}
+
+body.dark-mode .delete-liked-btn {
+  background: linear-gradient( 90deg, #ff0b0b70, #440b0d88);
+  border-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ff0000;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+  background-color: #c57d7d4d;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .delete-liked-btn:hover {
+  background: linear-gradient(90deg, #53140980, #f801164d);
+  color: white;
+}

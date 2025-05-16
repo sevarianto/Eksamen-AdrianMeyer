@@ -1,0 +1,48 @@
+/* global.css – Globale base-stiler for MatchMe */
+
+
+/* Layoutstruktur og font (felles for begge moduser)  */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+/* Feilmeldinger */
+.errorText {
+  color: #cc0000;
+  font-size: 1rem;
+  margin-top: -1rem;
+}
+
+
+/* **--Lys modus farge spesifikkasjoner for komponentene--** */
+body.light-mode {
+  background: linear-gradient(to bottom right, #ffe6e623, #ffffff);
+  color: #0c0c0c;
+}
+
+body.light-mode .errorText {
+  color: #d8000c;
+  background-color: #ffdddd;
+  border-color: #f5c6cb;
+}
+
+
+/* **--Mørk modus farge spesifikkasjoner for komponentene--** */
+body.dark-mode {
+  background-color: #000000ea;
+  color: #ffffff;
+}
+
+body.dark-mode .errorText {
+  background: #660000;
+  color: #ffcccc;
+  border-color: #992222;
+}
