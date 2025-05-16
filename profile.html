@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <title>MatchMe - Min Profil</title>
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/filter.css">
+
+  <link rel="icon" href="/assets/images/match me icon for favicon ai generert.png" type="image/x-icon" />
+</head>
+<body>
+  <div class="background-overlay"></div>
+
+  <main class="container">
+    <header>
+      <img src="/assets/images/MatchMe logo ai generert.png" alt="MatchMe - din datingplattform" class="logo" />
+      <h2 class="profile-heading">Min profil</h2>
+
+
+      <div class="button-row">
+        <button id="toggleTheme">Bytt til lys-modus</button>
+      </div>
+      
+      <a href="dashboard.html" class="button-link">⬅ Tilbake til Dashboard</a>
+    </header>
+
+    <form id="profileForm" class="auth-form">
+     <div class="auth-group">
+      <label for="editUsername">Brukernavn</label>
+      <input
+        type="text"
+        id="editUsername"
+        name="editUsername"
+        autocomplete="username"
+        placeholder="Endre brukernavn (valgfritt)"
+      />
+    </div>
+
+    <div class="auth-group">
+      <label for="editPassword">Nytt passord</label>
+      <input
+        type="password"
+        id="editPassword"
+        name="editPassword"
+        autocomplete="new-password"
+        placeholder="Nytt passord (valgfritt)"
+      />
+    </div>
+
+    <button type="submit" class="auth-btn">Oppdater</button>
+    <p id="updateMsg" class="auth-message"></p>
+    </form>
+  </main>
+
+  <script src="js/core/logger.js"></script>
+  <script src="js/core/api.js"></script>
+  <script src="js/ui/themeToggle.js"></script>
+  <script src="js/pages/profile.js"></script>
+</body>
+</html>
