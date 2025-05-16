@@ -22,6 +22,21 @@ Avhengigheter
 Jest
 Brukes til enhetstesting av JavaScript-funksjonalitet. Testene ligger i /tests-mappen.
 
+Backend og API - CrudCrud
+Dette prosjektet bruker CrudCrud som midlertidig backend for å lagre og hente brukerdata. CrudCrud tilbyr en enkel REST API som er gratis å bruke, men med noen begrensninger.
+
+Viktig:
+
+CrudCrud-endpointet som brukes i prosjektet varer kun i 24 timer fra det opprettes.
+
+Sensor må derfor opprette en egen gratis endpoint-URL på CrudCrud.com for å kunne teste lagring og henting av data.
+
+Når ny URL er opprettet, må den byttes ut i prosjektets konfigurasjonsfil api.js er definert i koden.
+
+Eksempel på URL i koden:
+
+const API_URL = "https://crudcrud.com/api/din-egen-endpoint/brukere";
+
 Ingen andre eksterne biblioteker
 All annen funksjonalitet er laget med vanilla JS.
 
