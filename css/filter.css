@@ -1,0 +1,120 @@
+/* filter.css -  CSS for filtreringseksjonen */
+
+/* Felles for begge moduser *
+/
+/* Filtreringseksjonen – overordnet blokk */
+#filtreringseksjon {
+  margin-top: 1rem;
+}
+
+/* Generelle labels */
+#filtreringseksjon label {
+  font-weight: bold;
+  display: block;
+  font-size: 1rem;
+}
+#genderFilter {
+  max-width: 150px;  
+  width: 100%;
+  margin-left: 0;
+  margin-bottom: 1rem;
+  display: block;;
+}
+
+label.age-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Alder-tallene */
+label.age-line span {
+  font-weight: semi-bold;
+  font-size: 0.9rem;
+  letter-spacing: 0.1px;
+}
+
+/* Slider-komponent */
+#customSlider {
+  position: absolute;
+  height: 60px;
+  background: #66555573;
+  max-height: 6px;
+  height: 100%;
+  margin-top: 4px;
+  max-width: 600px;
+  width: 100%;
+  padding: 0 -1rem 0 0;
+}
+
+/* Spor (bakgrunnslinje) */
+.slider .track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* Valgt aldersgruppe */
+.slider .range {
+  position: absolute;
+  top: 0;
+  height: 6px;
+  border-radius: 4px;
+  background: #cecacb80;
+}
+
+/* Tomler (de som dras) */
+.slider .thumb {
+  position: absolute;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+/* **--Lys modus farge spesifikkasjoner for komponentene--** */
+
+body.light-mode .slider .range {
+  background: #d14747ea;
+}
+
+body.light-mode .slider .thumb.min,
+body.light-mode .slider .thumb.max {
+  background: #3b3b3bda;
+  border: 1px solid #000000;
+}
+
+body.light-mode input[type=range]::-webkit-slider-thumb,
+body.light-mode input[type=range]::-moz-range-thumb {
+  background: #ffffff;
+}
+
+
+/* **--Mørk modus farge spesifikkasjoner for komponentene--** */
+body.dark-mode .slider .track {
+  background: #444;
+}
+
+body.dark-mode .slider .range {
+  background: #ff5f6d80;
+}
+
+body.dark-mode .slider .thumb.min,
+body.dark-mode .slider .thumb.max {
+  background: #000000;
+  border: 2px solid #ffcccc;
+}
+
+body.dark-mode input[type=range]::-webkit-slider-thumb,
+body.dark-mode input[type=range]::-moz-range-thumb {
+  background: #ffc0cb;
+}

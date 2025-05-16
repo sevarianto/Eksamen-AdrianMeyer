@@ -1,0 +1,253 @@
+/* components.css - CSS for hovedkomponentene  samt farge spesifikasjoner for lys/mørk */
+
+/* Felles for begge moduser */
+
+/* Bytt tema lys/mørk */
+#toggleTheme {
+  transition: background 0.3s ease;
+}
+
+/* Velkomstmelding */
+.greeting-message {
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: -4rem;
+  margin-bottom: 2rem;
+}
+
+/* Brukerkort */
+#userCard {
+  padding: 2rem;
+  margin: -1rem auto 1rem auto;
+  max-width: 500px;
+  width: 100%;
+  max-height: 250px;
+  height: 100%;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#userCard:hover {
+  transform: scale(1.05);
+}
+
+#userCard img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#userCard h3 {
+  margin: 0.5rem 0 0;
+  font-size: 1.4rem;
+}
+
+#userCard p {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* Swipe funksjon knapper */
+.swipe-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1rem;
+}
+
+/* Spesifikt for ikonene */
+.swipe-icon-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: transform 0.2s, background 0.3s ease;
+  padding: 0;
+}
+
+.swipe-icon-btn img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Likte brukere seksjon */
+#likte-brukere-seksjon {
+  margin-top: 1rem;
+}
+
+/* h2 "Likte brukere" */
+#likte-brukere-seksjon h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 0.3px;
+}
+
+/* Brukerliste */
+#likedUsersList {
+  text-align: left;
+  font-size: 0.85rem;
+  font-weight: 500;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Enkelt bruker-element */
+#likedUsersList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-radius: 10px;
+  position: relative;
+  max-height: 90px;
+  margin: 0.5rem auto;
+  padding: 0.75rem 1rem ;
+  background-color: rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+}
+
+/* Likte bruker med bilde */
+.liked-user-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.liked-user-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+
+
+/* **--Lys modus farge spesifikkasjoner for komponentene--**  */
+body.light-mode .greeting-message {
+  color: #141414; 
+  Text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6), 
+               0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode #toggleTheme {
+  background: linear-gradient(90deg, #ff8bb2c5, #f5e6edbe);
+  color: rgba(0, 0, 0, 0.76);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4), 0 -1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #ff9ae185;
+  border: none;
+  box-shadow: 0 4px 10px rgba(27, 27, 27, 0.466);
+}
+
+body.light-mode #toggleTheme:hover {
+ background: linear-gradient(90deg, #ffc3a0, #ff8ecf);
+}
+
+body.light-mode #userCard {
+  background: #ffffff7c;
+  border: 1px solid #0000003b;
+  color: #000;
+}
+
+body.light-mode .swipe-icon-btn {
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.521);
+}
+
+body.light-mode .swipe-icon-btn:hover {
+  background: linear-gradient(90deg, #ffc3a0, #ff8ecf);
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2); 
+  transform: translateY(-1px);
+}
+
+body.light-mode .swipe-icon-btn.like {
+  border: 2.3px solid #e6368ec7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.692);
+}
+
+body.light-mode .swipe-icon-btn.no {
+  border: 2.3px solid #cf0a0ac7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.692);
+}
+
+body.light-mode .swipe-icon-btn.rose {
+  border: 2.3px solid #8a128ae7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.692);
+}
+
+body.light-mode #likte-brukere-seksjon h2 {
+  color: #222222;
+}
+
+body.light-mode #likedUsersList li {
+  background-color: #f2f2f2;
+  color: #333333;
+}
+
+
+
+/* **--Mørk modus farge spesifikkasjoner for komponentene--** */
+body.dark-mode .greeting-message {
+  color: #ffffff; 
+}
+
+body.dark-mode #toggleTheme {
+  background: linear-gradient(90deg, #a04c8bb0, #a07539ab);
+  color: rgba(255, 255, 255, 0.884);
+  border: none;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode #toggleTheme:hover {
+  background: linear-gradient(90deg, #ffca80, #ff5f6d);
+}
+
+body.dark-mode #userCard {
+  background-color: rgba(0, 0, 0, 0.404);
+  border: 1px solid #41414133;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .swipe-icon-btn {
+  background-color: #ffc2d656;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.301);
+}
+
+body.dark-mode .swipe-icon-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.808);
+}
+
+body.dark-mode .swipe-icon-btn.like {
+  border: 2px solid #ff7bbd;
+}
+
+body.dark-mode .swipe-icon-btn.no {
+  border: 2px solid #ff7bbd;
+}
+
+body.dark-mode .swipe-icon-btn.rose {
+  border: 2px solid #ff7bbd;
+}
+
+body.dark-mode #likte-brukere-seksjon h2 {
+  color: #ffffff;
+}
+
+body.dark-mode #likedUsersList li {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+}
